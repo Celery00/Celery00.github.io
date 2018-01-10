@@ -75,17 +75,11 @@
 .home_left .fs-16{
 	color: #8A4F19;
 }
-.home_left ul li a img{
-	display: inline-block;
-	width: 25px;
-	height: 25px;
-	border:none!important;
-	margin-left: 15px;
-	background: #999;
+.home_left ul li a .fa{
+	font-size: 20px;
+	margin:0 15px;
 }
-.b_color{
-	background:#c18132!important;
-}
+
 
 /*右边*/
 .home_right{
