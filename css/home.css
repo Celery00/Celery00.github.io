@@ -1,0 +1,97 @@
+/*个人主页*/
+.home{
+	background: url(../img2/home_back.jpg) no-repeat;
+	background-size:cover; 
+}
+.home_one{
+	background: url(../img2/home_back2.jpg);
+}
+.curr{
+	background: #ccc;
+	opacity: 0.5;
+	color: #333!important;
+}
+/*内容*/
+.home_center{
+	background:rgba(255,255,255,0.1);
+	border-radius: 10px;
+	box-shadow: 0 0 30px 2px #eee;
+	position: fixed;;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: 20px 50px;
+	margin-bottom: -10px;
+}
+/*顶部*/
+.home_top{
+	line-height: 60px;
+	position: fixed;
+	top: 30px;
+	left: 320px;
+	right: 80px;
+	background:rgba(255,255,255,0.1);
+}
+.home_top ul li{
+	margin:0 10px;
+	text-align: center;
+	flex: 1;
+	border-radius: 10px;
+	color: #efeeee;
+}
+.home_top ul li:first-child{
+	margin-left: 0!important;
+}
+.home_top ul li:last-child{
+	margin-right: 0!important;
+}
+
+/*左边*/
+.home_left{
+	text-align: center;
+	width: 200px;
+	height: 500px;
+	line-height: 50px;
+	position: fixed;;
+	top: 100px;
+	left: 60px;
+	background:rgba(255,255,255,0.1);
+}
+.home_left img{
+	display: inline-block;
+	width: 150px;
+	height: 150px;
+	border: 4px solid #7bf5bd;
+	border-radius:50%;
+	margin-top: 30px;
+}
+.home_left .fs-30{
+	color: #333;
+	font-weight: 500;
+}
+.home_left .fs-16{
+	color: #8A4F19;
+}
+.home_left ul li a img{
+	display: inline-block;
+	width: 25px;
+	height: 25px;
+	border:none!important;
+	margin-left: 15px;
+	background: #999;
+}
+.b_color{
+	background:#c18132!important;
+}
+
+/*右边*/
+.home_right{
+	position: absolute;
+	top:80px;
+	left: 250px;
+	right: 30px;
+	bottom: 0;
+	background: #ccc;
+	height: 600px;
+}
