@@ -56,7 +56,12 @@
 			</div>
 			
 		</div>
-		<audio src="img2/薛之谦_几个你.mp3" autoplay="autoplay" loop="loop" controls='controls'></audio>
+		<div>
+			<!-- <div>薛之谦_几个你</div>
+			<audio src="img2/薛之谦_几个你.mp3" autoplay="autoplay" loop="loop" controls='controls'></audio> -->
+		</div>
+		
+
 	</div>
 	
 </div>
@@ -77,10 +82,19 @@
 			
 		},
 		mounted:function(){
-
+			var that = this;
+			that.$nextTick(function () {
+				that.init();
+            })
 		},
 		methods:{
-
+			//初始化数据
+				init:function () {
+					var that = this;
+					that.$http.post('./my.html').then(function (res) {
+                       controls.log(0);
+                    })
+                },
 		},
 	});
 	
