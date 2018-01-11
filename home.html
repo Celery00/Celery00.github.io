@@ -74,9 +74,9 @@
 					</div>
 					<!-- 分享，收藏，喜欢按钮 -->
 					<div class="music-icon">
-						<a class="m-icon m-fenxiang colored" href="http://service.weibo.com/share/share.php?title=#_loginLayer_1466697157538" target="new"></a>
-						<span class="m-icon m-star colored"></span>
-						<span class="m-icon m-heart colored"></span>
+						<a class="m-icon m-fenxiang colored" href="http://service.weibo.com/share/share.php?title=#_loginLayer_1466697157538" target="new" title="分享微博"></a>
+						<span class="m-icon m-star colored" title="收藏"></span>
+						<span class="m-icon m-heart colored" title="喜欢"></span>
 					</div>
 				</div>
 				<!-- 进度条 -->
@@ -92,8 +92,8 @@
 					</div>
 					<!-- 循环播放，随机播放按钮 -->
 					<div class="music-control">
-						<span class="m-icon m-xunhuan colored"></span>
-						<span class="m-icon m-lyric colored lyriced"></span>
+						<span class="m-icon m-xunhuan colored" title="循坏"></span>
+						<span class="m-icon m-lyric colored lyriced" title="歌词"></span>
 					</div>			
 				</div>
 			</div>
@@ -164,7 +164,7 @@
 	//获取频道信息
 	function getChannel(){
 		$.ajax({
-			url: 'https://api.jirengu.com/fm/getChannels.php',
+			url: 'http://api.jirengu.com/fm/getChannels.php',
 			dataType: 'json',
 			Method: 'get',
 			success: function(response){
@@ -182,7 +182,7 @@
 	// 通过ajax获取歌曲
 	function getmusic(){
 		$.ajax({
-			url: 'https://api.jirengu.com/fm/getSong.php',
+			url: 'http://api.jirengu.com/fm/getSong.php',
 			dataType: 'json',
 			Method: 'get',
 			data:{
@@ -218,7 +218,7 @@
 	function getlyric(){
 		var Sid = $('audio').attr('sid');
 		var Ssid = $('audio').attr('ssid');
-		$.post('https://api.jirengu.com/fm/getLyric.php', {ssid: Ssid, sid: Sid})
+		$.post('http://api.jirengu.com/fm/getLyric.php', {ssid: Ssid, sid: Sid})
 	        .done(function (lyr){
 	        	console.log(lyr);
 	        	var lyr = JSON.parse(lyr);;
