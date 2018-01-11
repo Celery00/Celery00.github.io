@@ -162,23 +162,23 @@
 		$('.btn1').removeClass('m-pause').addClass('m-play');
 	}
 	//获取频道信息
-	// function getChannel(){
-	// 	$.ajax({
-	// 		url: 'http://api.jirengu.com/fm/getChannels.php',
-	// 		dataType: 'json',
-	// 		Method: 'get',
-	// 		success: function(response){
-	// 			var channels = response.channels;
-	// 			var num = Math.floor(Math.random()*channels.length);
-	// 			var channelname = channels[num].name;
-	// 			var channelId = channels[num].channel_id;
-	// 			$('.record').text(channelname);
-	// 			$('.record').attr('title',channelname);
-	// 			$('.record').attr('data-id',channelId);
-	// 			getmusic();
-	// 		}
-	// 	})
-	// }
+	function getChannel(){
+		$.ajax({
+			url: 'http://api.jirengu.com/fm/getChannels.php',
+			dataType: 'json',
+			Method: 'get',
+			success: function(response){
+				var channels = response.channels;
+				var num = Math.floor(Math.random()*channels.length);
+				var channelname = channels[num].name;
+				var channelId = channels[num].channel_id;
+				$('.record').text(channelname);
+				$('.record').attr('title',channelname);
+				$('.record').attr('data-id',channelId);
+				getmusic();
+			}
+		})
+	}
 	// 通过ajax获取歌曲
 	function getmusic(){
 		$.ajax({
@@ -314,7 +314,7 @@
 			$('.background .music-lyric').css({'display':'none'})
 		}
 	})
-	// $(document).ready(getChannel())
+	$(document).ready(getChannel())
 
 </script>
 </body>
