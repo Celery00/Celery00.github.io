@@ -12,6 +12,32 @@ export default {
 
 <style>
 
+/*美化滚动条*/
+::-webkit-scrollbar {
+	width: 8px;
+} /* 这是针对缺省样式 (必须的) */
+::-webkit-scrollbar-track {
+	  background-color: #333;
+	  border-radius: 10px;
+} /* 滚动条的滑轨背景颜色 */
+
+::-webkit-scrollbar-thumb {
+	  background-color: rgba(0, 0, 0, 0.2); 
+	  background: #ccc;
+	  border-radius: 10px;
+} /* 滑块颜色 */
+
+::-webkit-scrollbar-button {
+	 /* background-color: #333;
+	  border-top-right-radius: 10px;
+	  border-top-left-radius: 10px;*/
+
+} /* 滑轨两头的监听按钮颜色 */
+
+::-webkit-scrollbar-corner {
+	  background-color: black;
+} /* 横向滚动条和纵向滚动条相交处尖角的颜色 */
+
 	body{
 	    background: url(./assets/home_back.jpg) no-repeat;
 	    background-size:cover; 

@@ -1,5 +1,25 @@
 <template>
-	<div class="home">主页</div>
+	<div class="home">
+
+		<ul>
+			<li>njnj</li>
+			<li>njnj</li>
+			<li>njnj</li>
+			<li>njnj</li>
+			<li>njnj</li>
+			<li>njnj</li>
+			<li>njnj</li>
+			<li>njnj</li>
+			<li>njnj</li>
+			<li>bhbhbnjnj</li>
+			<li>bhbhbnjnj</li>
+			<li>bhbhbnjnj</li>
+			<li>bhbhbnjnj</li>
+			<li>bhbhbnjnj</li>
+			<li>bhbhbnjnj</li>
+		</ul>
+
+	</div>
 </template>
 
 <script>
@@ -23,6 +43,8 @@ export default {
 .home{
 	color: #fff;
 }
-
+li{
+	font-size: 30px;
+}
 
 </style>

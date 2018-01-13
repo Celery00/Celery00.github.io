@@ -1,19 +1,19 @@
 <template>
   <div class="top">
     <ul class="ufb">
-    	<li @click='changeBack'>
+    	<li :class="curr==1?'curr':''" @click='changeBack(1)'>
 			<router-link to="/home">个人主页</router-link>
     	</li>
-    	<li @click='changeBack'>
+    	<li :class="curr==2?'curr':''" @click='changeBack(2)'>
 			<router-link to="/skill">个人技能</router-link>
     	</li>
-    	<li @click='changeBack'>
+    	<li :class="curr==3?'curr':''" @click='changeBack(3)'>
 			<router-link to="/photo">相册</router-link>
     	</li>
-    	<li @click='changeBack'>
+    	<li :class="curr==4?'curr':''" @click='changeBack(4)'>
 			<router-link to="/mood">心情</router-link>
     	</li>
-    	<li @click='changeBack'>
+    	<li :class="curr==5?'curr':''" @click='changeBack(5)'>
 			<router-link to="/hehe">呵呵哒</router-link>
     	</li>
 
@@ -26,13 +26,14 @@ export default {
   name: 'top',
   data () {
     return {
-     	curr:1
+     	curr:1,
     }
   },
   methods:{
-  	changeBack:function(e){
-  		console.log(e);
-
+  	changeBack:function(num){
+  		console.log(this.curr);
+  		this.curr=num;
+  		
   	},
   },
   mounted:function(){
@@ -45,9 +46,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .curr{
-	background: #ccc;
-	opacity: 0.5;
-	color: #333!important;
+	background: rgba(255,255,255,0.3);
 }
 .top{
 	line-height: 60px;
@@ -56,7 +55,7 @@ export default {
 	top: 30px;
 	left: 320px;
 	right: 80px;
-	background:rgba(255,255,255,0.1);
+	background:rgba(255,255,255,0.3);
 	z-index: 100;
 }
 
@@ -74,7 +73,5 @@ export default {
 .top ul li:last-child{
 	margin-right: 0!important;
 }
-a{
-	color:#fff;
-}
+
 </style>

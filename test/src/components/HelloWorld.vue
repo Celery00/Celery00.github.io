@@ -14,9 +14,6 @@ import top from '@/components/top'
 import left from '@/components/left'
 import right from '@/components/right'
 
-
-
-
 export default {
   name: 'HelloWorld',
   data () {
