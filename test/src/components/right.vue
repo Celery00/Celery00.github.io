@@ -1,7 +1,6 @@
 <template>
   	<div class="home_right">
 		<router-view></router-view>
-
 	</div>
 </template>
 

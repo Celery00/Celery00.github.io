@@ -2,7 +2,9 @@
   <div class="hello">
     <top></top>
     <left></left>
-    <right></right>
+    <right>
+		
+    </right>
   </div>
 </template>
 
@@ -26,7 +28,6 @@ export default {
   	top,
   	left,
   	right,
-
 
 
   }
