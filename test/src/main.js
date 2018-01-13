@@ -6,6 +6,16 @@ import router from './router'
 
 Vue.config.productionTip = false
 
+
+import iView from 'iview'
+import 'iview/dist/styles/iview.css'
+
+import 'jquery/dist/jquery.min.js'
+import 'font-awesome/css/font-awesome.min.css'
+
+
+Vue.use(iView)
+
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

@@ -2,6 +2,7 @@
   <div class="hello">
     <top></top>
     <left></left>
+    <right></right>
   </div>
 </template>
 
@@ -9,6 +10,9 @@
 
 import top from '@/components/top'
 import left from '@/components/left'
+import right from '@/components/right'
+
+
 
 
 export default {
@@ -20,7 +24,10 @@ export default {
   },
   components:{
   	top,
-  	left
+  	left,
+  	right,
+
+
 
   }
 }

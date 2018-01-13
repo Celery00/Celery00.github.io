@@ -1,9 +1,9 @@
 <template>
   <div class="home_left">
 		<img src="../assets/7.jpg" alt="">
-		<p class="fs-30 mar-tb-20">Celery</p>
+		<p class="fs-30">Celery</p>
 		<p class="fs-16">爱玩爱工作,爱吃爱生活~</p>
-		<ul class="ufb ufb-pc mar-t-20">
+		<ul class="ufb ufb-pc">
 			<li>
 				<a href="https://weibo.com/5831188960/profile?rightmod=1&wvr=6&mod=personinfo&is_all=1" title='微博'>
 					<i class="fa fa-weibo" aria-hidden="true"></i>
@@ -15,7 +15,7 @@
 				</a>
 			</li>
 			<li>
-				<a href="" title="微信">	
+				<a href="#" title="微信">	
 					<i class="fa fa-wechat" aria-hidden="true"></i>
 				</a>
 			</li>
@@ -29,7 +29,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 
   .home_left{
 	text-align: center;
@@ -52,10 +52,12 @@ export default {
 	margin-top: 30px;
 }
 .home_left .fs-30{
+	margin: 20px 0;
 	color: #333;
 	font-weight: 500;
 }
 .home_left .fs-16{
+	margin-bottom:20px; 
 	color: #8A4F19;
 }
 .home_left ul li a .fa{

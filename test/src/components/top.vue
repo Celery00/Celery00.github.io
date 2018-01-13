@@ -1,7 +1,22 @@
 <template>
   <div class="top">
-    <ul>
-    	<li v-for='item in lists'>{{item}}</li>
+    <ul class="ufb">
+    	<li @click='changeBack'>
+			<router-link to="/home">个人主页</router-link>
+    	</li>
+    	<li @click='changeBack'>
+			<router-link to="/skill">个人技能</router-link>
+    	</li>
+    	<li @click='changeBack'>
+			<router-link to="/photo">相册</router-link>
+    	</li>
+    	<li @click='changeBack'>
+			<router-link to="/mood">心情</router-link>
+    	</li>
+    	<li @click='changeBack'>
+			<router-link to="/hehe">呵呵哒</router-link>
+    	</li>
+
     </ul>
   </div>
 </template>
@@ -11,9 +26,19 @@ export default {
   name: 'top',
   data () {
     return {
-     	lists:['个人主页','个人技能','相册','心情','呵呵哒']
+     	curr:1
     }
-  }
+  },
+  methods:{
+  	changeBack:function(e){
+  		console.log(e);
+
+  	},
+  },
+  mounted:function(){
+
+  },
+
 }
 </script>
 
@@ -34,17 +59,22 @@ export default {
 	background:rgba(255,255,255,0.1);
 	z-index: 100;
 }
+
 .top ul li{
 	margin:0 10px;
 	text-align: center;
 	flex: 1;
 	border-radius: 10px;
 	color: #efeeee;
+	font-size: 16px;
 }
 .top ul li:first-child{
 	margin-left: 0!important;
 }
 .top ul li:last-child{
 	margin-right: 0!important;
+}
+a{
+	color:#fff;
 }
 </style>
