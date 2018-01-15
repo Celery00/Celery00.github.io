@@ -33,7 +33,6 @@ export default {
   	changeBack:function(num){
   		console.log(this.curr);
   		this.curr=num;
-  		
   	},
   },
   mounted:function(){
