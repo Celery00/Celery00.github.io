@@ -14,25 +14,32 @@
 <div id="app">
 	<div>ni</div>
   <p>
-    <router-link to="/user/foo">/user/foo</router-link>
-    <router-link to="/user/bar">/user/bar</router-link>
+    <router-link to="/foo">/user/foo</router-link>
+    <router-link to="/bar">/user/bar</router-link>
   </p>
   <router-view></router-view>
 </div>
 
 	<script>
 
-		const User = {
-		template: `<div>User {{ $route.params.id }}</div>`
+		const foo = {
+		template: `<div>foo</div>`
+		}
+		const bar = {
+		template: `<div>bar</div>`
 		}
 
 		const router = new VueRouter({
 		  routes: [
-		    { path: '/user/:id', component: User }
-		  ]
+		    { path: '/foo', component: foo },
+		    { path: '/bar', component: bar }
+		  
+		  ],
+		  // mode:'history'
 		})
 
 		const app = new Vue({ router }).$mount('#app')
+
 	</script>
 	
 </body>
