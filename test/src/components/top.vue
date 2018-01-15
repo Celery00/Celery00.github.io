@@ -31,7 +31,6 @@ export default {
   },
   methods:{
   	changeBack:function(num){
-  		console.log(this.curr);
   		this.curr=num;
   	},
   },
