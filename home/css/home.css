@@ -34,9 +34,10 @@
 	background: url(../img2/home_back2.jpg);
 }
 .curr{
-	background: #ccc;
-	opacity: 0.5;
-	color: #333!important;
+	background: rgba(255,255,255,0.5);
+}
+.b-color{
+	color: #3a3acc!important;
 }
 /*内容*/
 .home_center{
@@ -59,7 +60,7 @@
 	top: 30px;
 	left: 320px;
 	right: 80px;
-	background:rgba(255,255,255,0.1);
+	background:rgba(255,255,255,0.3);
 	z-index: 100;
 }
 .home_top ul li{
@@ -67,7 +68,6 @@
 	text-align: center;
 	flex: 1;
 	border-radius: 10px;
-	color: #efeeee;
 }
 .home_top ul li:first-child{
 	margin-left: 0!important;

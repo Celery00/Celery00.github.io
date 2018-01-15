@@ -18,11 +18,11 @@
 	<!-- 头部 -->
 	<div class="home_top">
 		<ul class="ufb ufb-pj fs-16">
-			<li class="curr">个人主页</li>
-			<li>技能介绍</li>
-			<li>相册</li>
-			<li>心情</li>
-			<li>呵呵哒</li>
+			<li :class="curr==1?'curr':''" @click='changeBack(1)'> <a href="#">个人主页</a></li>
+			<li :class="curr==2?'curr':''" @click='changeBack(2)'> <a href="#">技能介绍</a></li>
+			<li :class="curr==3?'curr':''" @click='changeBack(3)'> <a href="#">相册</a></li>
+			<li :class="curr==4?'curr':''" @click='changeBack(4)'> <a href="#">心情</a></li>
+			<li :class="curr==5?'curr':''" @click='changeBack(5)'> <a href="#">呵呵哒</a></li>
 		</ul>
 	</div>
 	<!-- 左边 -->
@@ -32,51 +32,51 @@
 		<p class="fs-16">爱玩爱工作,爱吃爱生活~</p>
 		<ul class="ufb ufb-pc mar-t-20">
 			<li>
-				<a href="https://weibo.com/5831188960/profile?rightmod=1&wvr=6&mod=personinfo&is_all=1" title='微博'>
+				<a href="https://weibo.com/5831188960/profile?rightmod=1&wvr=6&mod=personinfo&is_all=1" title='微博' target="_blank">
 					<i class="fa fa-weibo" aria-hidden="true"></i>
 				</a>
 			</li>
 			<li>
-				<a href="https://github.com/Celery00/Celery00.github.io" title="github">
+				<a href="https://github.com/Celery00/Celery00.github.io" title="github" target="_blank">
 					<i class="fa fa-github" aria-hidden="true"></i>
 				</a>
 			</li>
-			<li>
+			<!-- <li>
 				<a href="" title="微信">	
 					<i class="fa fa-wechat" aria-hidden="true"></i>
 				</a>
-			</li>
+			</li> -->
 		</ul>	
 		
 	</div>
-	<!-- 右边 -->
+	<!-- 右边 --> 
 	<div class="home_right">
-		<div class="text">
-			<div id='wx_logo' style='margin:0 auto;display:none;'>
-				<img src="img2/7.jpg"/>
-			</div>
-			
-		</div>
+		<ul>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
 		
-
 	</div>
 	
 </div>
 
 <script>
 	$(function(){
-		$('.home_top ul li').hover(function(){
+		$('.home_top ul li').click(function(){
 			var that=$(this);
-			$(that).fadeIn().addClass('curr').siblings().removeClass('curr');
+			$(that).addClass('curr').removeClass('b-color').siblings().removeClass('curr');
 
 		});
-
+		
 	});
 
 	new Vue({
 		el:'.home_center',
 		data:{
-			
+			curr:1
 		},
 		mounted:function(){
 			var that = this;
@@ -86,10 +86,13 @@
 		},
 		methods:{
 			//初始化数据
-				init:function () {
-					
-					
-                },
+			init:function () {
+			
+            },
+            //改变导航背景色
+            changeBack:function(num){
+            	this.curr=num;
+            },
 		},
 
 	});
