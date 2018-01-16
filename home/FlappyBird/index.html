@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>小鸟呵呵哒</title>
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
     <style>
         *{
             margin: 0;
@@ -10,14 +11,20 @@
         }
         #canvas{
             display: block;
-            margin: 0 auto;
+            margin:0 auto;
             background-color: skyblue;
+            border: 1px solid #fff;
+        }
+        .div{
+            height: 50px;
+            text-align: center;
         }
     </style>
 
 </head>
 <body>
-<canvas id="canvas" width='900' height='600' style='border: 1px solid #000;'></canvas>
+<div class="div"><img src="images/gamebegin.png" alt=""></div>
+<canvas id="canvas" width='900' height='600'></canvas>
 <script src='js/simple-inheritence.js'></script>
 <script src='js/underscore-min.js'></script>
 <script src='js/Game.js'></script>
@@ -33,6 +40,11 @@
         canvasId : 'canvas',
         fps : 50 // 传-1表示电脑最大的fps
     });
+
+    $('div').click(function(){
+
+    })
+
 
     // 2.修改画布的宽高
     // game.canvas.width = window.innerWidth;
