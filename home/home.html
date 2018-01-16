@@ -18,7 +18,7 @@
 	<!-- 头部 -->
 	<div class="home_top">
 		<ul class="ufb ufb-pj fs-16">
-			<li :class="curr==1?'curr':''" @click='changeBack(1)'> <a href="#">个人主页</a></li>
+			<li :class="curr==1?'curr':''" @click='changeBack(1,"skill.html")'> <a href="#">个人主页</a></li>
 			<li :class="curr==2?'curr':''" @click='changeBack(2)'> <a href="#">技能介绍</a></li>
 			<li :class="curr==3?'curr':''" @click='changeBack(3)'> <a href="#">相册</a></li>
 			<li :class="curr==4?'curr':''" @click='changeBack(4)'> <a href="#">心情</a></li>
@@ -51,19 +51,13 @@
 	</div>
 	<!-- 右边 --> 
 	<div class="home_right">
-		<ul>
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
-		</ul>
 		
 	</div>
 	
 </div>
 
 <script>
+	//tab切换
 	$(function(){
 		$('.home_top ul li').click(function(){
 			var that=$(this);
@@ -72,6 +66,8 @@
 		});
 		
 	});
+
+	
 
 	new Vue({
 		el:'.home_center',
@@ -90,9 +86,23 @@
 			
             },
             //改变导航背景色
-            changeBack:function(num){
+            changeBack:function(num,url){
             	this.curr=num;
-            },
+			            	//数据请求,内容页面展示
+				$.ajax({
+					url:url,
+					type:'post',
+					data:{
+
+					},
+					succes:function(data){
+						console.log(data);
+					},
+					error:function(){
+
+					}
+				});
+			}
 		},
 
 	});
