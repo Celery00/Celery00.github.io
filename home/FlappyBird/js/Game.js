@@ -125,6 +125,7 @@
             }
             // 发送通知,小鸟死亡
             game.bird.die = true;
+            $('audio').css({'display':'none'});
         }
     });
 })();
