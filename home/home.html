@@ -18,7 +18,7 @@
 	<!-- 头部 -->
 	<div class="home_top">
 		<ul class="ufb ufb-pj fs-16">
-			<li :class="curr==1?'curr':''" @click='changeBack(1,"skill.html")'> <a href="#">个人主页</a></li>
+			<li :class="curr==1?'curr':''" @click='changeBack(1,"home")'> <a href="#">个人主页</a></li>
 			<li :class="curr==2?'curr':''" @click='changeBack(2)'> <a href="#">技能介绍</a></li>
 			<li :class="curr==3?'curr':''" @click='changeBack(3)'> <a href="#">相册</a></li>
 			<li :class="curr==4?'curr':''" @click='changeBack(4)'> <a href="#">心情</a></li>
@@ -88,9 +88,9 @@
             //改变导航背景色
             changeBack:function(num,url){
             	this.curr=num;
-			            	//数据请求,内容页面展示
+				//数据请求,内容页面展示
 				$.ajax({
-					url:url,
+					url:'https://celery00.github.io/home/'+ url + '.html',
 					type:'post',
 					data:{
 
