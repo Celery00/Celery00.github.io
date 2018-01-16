@@ -41,7 +41,7 @@
         .div img{
             height: 60px;
         }
-        .div audio{
+        .div .audio{
             position: absolute;
             top: 15px;
             right: 0;
@@ -53,7 +53,7 @@
 <div class="div">
     <a href="../home.html">我要回去个人主页~</a>
     <img src="images/gamebegin.png" alt="">
-    <audio src="images/mali.mp3" loop="loop" controls='controls' autoplay='autoplay'>出问题啦</audio>
+    <audio class="audio" src="images/mali.mp3" loop="loop" controls='controls' autoplay='autoplay'>出问题啦</audio>
 </div>
 <canvas id="canvas" width='1000' height='580'></canvas>
 <script src='js/simple-inheritence.js'></script>
@@ -73,9 +73,11 @@
     });
 
     $('div').click(function(){
-       top.location.reload();
-       var audio=$("<audio></audio>").attr({src:'images/mali.mp3',loop:"loop",controls:"controls",autoplay:"autoplay"})
-       $('.div').append(audio);
+        $('.div').remove('.audio');
+        top.location.reload();
+        var audio=$("<audio></audio>").attr({src:'images/mali.mp3',loop:"loop",controls:"controls",autoplay:"autoplay"})
+        audio.addClass('audio');
+        $('.div').append(audio);
     });
 
 
