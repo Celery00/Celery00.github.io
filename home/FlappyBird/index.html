@@ -19,13 +19,19 @@
             border: 1px solid #9a9595;
         }
         .div{
+            width: 1000px;
+            margin: 0 auto;
+            position: relative;
             text-align: center;
         }
         .div a{
             width: 150px;
             position: absolute;
-            left: 25px;
-            top: 20px;
+            left: 0px;
+            top: 10px;
+            background: #eee;
+            border-radius: 10px;
+            padding: 10px;
             color: #666;
             text-decoration: none;
         }
@@ -35,6 +41,11 @@
         .div img{
             height: 60px;
         }
+        .div audio{
+            position: absolute;
+            top: 15px;
+            right: 0;
+        }
     </style>
 
 </head>
@@ -42,7 +53,7 @@
 <div class="div">
     <a href="../home.html">我要回去个人主页~</a>
     <img src="images/gamebegin.png" alt="">
-    <audio src="images/mali.mp3" loop="loop" controls='controls'></audio>
+    <audio src="images/mali.mp3" loop="loop" controls='controls' autoplay='autoplay'>出问题啦</audio>
 </div>
 <canvas id="canvas" width='1000' height='580'></canvas>
 <script src='js/simple-inheritence.js'></script>
