@@ -74,7 +74,8 @@
 
     $('div').click(function(){
        top.location.reload();
-       $('audio').css({'display':'inline-block'})
+       var audio=$("<audio></audio>").attr({src:'images/mali.mp3'loop:"loop",controls:"controls",autoplay:"autoplay"})
+       $('.div').append(audio);
     });
 
 
