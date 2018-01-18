@@ -53,7 +53,7 @@
 <div class="div">
     <a href="../home.html">我要回去个人主页~</a>
     <img src="images/gamebegin.png" alt="">
-    <audio class="audio" src="images/mali.mp3" loop="loop" controls='controls' autoplay='autoplay'>浏览器版本太低,无法播放音乐建议升级!</audio>
+   <!--  <audio class="audio" src="images/mali.mp3" loop="loop" controls='controls' autoplay='autoplay'>浏览器版本太低,无法播放音乐建议升级!</audio> -->
 </div>
 <canvas id="canvas" width='1000' height='580'></canvas>
 <script src='js/simple-inheritence.js'></script>
@@ -80,7 +80,7 @@
         var audio=$("<audio> </audio>").attr({src:"images/mali.mp3",loop:"loop",controls:"controls",autoplay:"autoplay"})
         audio.addClass('audio');
         $('.div').append(audio);
-
+        self.run();
         
     });
 
