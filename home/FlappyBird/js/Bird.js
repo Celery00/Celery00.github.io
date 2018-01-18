@@ -129,7 +129,7 @@
             //     self.deleteY = 1;
             // }
             
-            $(game.canvas).on('click',function(){
+            game.canvas.on('click',function(){
                 $(self).state = 1;
                 $(self).rotateAngle = -25;
                 $(self).deleteY = 1;
