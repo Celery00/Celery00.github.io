@@ -120,7 +120,7 @@
             //备份指针
             var self = this;
             // var onmousedown = window.onmousedown?'onmousedown':''
-            game.canvas.click = function () {
+            game.canvas.onclick = function () {
                 // 更新小鸟的状态
                self.state = 1;
                // 小鸟上升的角度
