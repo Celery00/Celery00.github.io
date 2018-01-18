@@ -119,15 +119,20 @@
         blindClick : function () {
             //备份指针
             var self = this;
-            // var onmousedown = window.onmousedown?'onmousedown':''
-            game.canvas.onclick = function () {
-                // 更新小鸟的状态
-               self.state = 1;
-               // 小鸟上升的角度
+            var onclick  = window.onclick?'onclick':'touch';
+            // game.canvas.onclick = function () {
+            //     // 更新小鸟的状态
+            //    self.state = 1;
+            //    // 小鸟上升的角度
+            //     self.rotateAngle = -25;
+            //     // 复位空气的阻力
+            //     self.deleteY = 1;
+            // }
+            $(document).on('click','game.canvas',function(){
+                self.state = 1;
                 self.rotateAngle = -25;
-                // 复位空气的阻力
                 self.deleteY = 1;
-            }
+            })
         }
         
     });
