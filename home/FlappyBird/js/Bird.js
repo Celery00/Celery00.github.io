@@ -119,7 +119,8 @@
         blindClick : function () {
             //备份指针
             var self = this;
-            game.canvas.onmousedown = function () {
+            // var onmousedown = window.onmousedown?'onmousedown':''
+            game.canvas.click = function () {
                 // 更新小鸟的状态
                self.state = 1;
                // 小鸟上升的角度
