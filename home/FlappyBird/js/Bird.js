@@ -119,7 +119,7 @@
         blindClick : function () {
             //备份指针
             var self = this;
-            var onclick  = window.onclick?'window.onclick':'touch';
+            // var onclick  = window.onclick?'window.onclick':'touch';
             game.canvas.onclick = function () {
                 // 更新小鸟的状态
                self.state = 1;
@@ -129,7 +129,10 @@
                 self.deleteY = 1;
             }
             
-            // game.canvas.on('click',function(){
+            
+            
+            
+            // game.canvas.on('click','touch',function(){
             //     $(self).state = 1;
             //     $(self).rotateAngle = -25;
             //     $(self).deleteY = 1;
