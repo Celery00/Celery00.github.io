@@ -73,7 +73,7 @@
     });
 
     $('div').click(function(){
-        window.location.reload();
+        location.reload();
         setTimeout(function() {
             $('audio').remove('.audio');
             var audio=$("<audio> </audio>").attr({src:"images/mali.mp3",loop:"loop",controls:"controls",autoplay:"autoplay"})
