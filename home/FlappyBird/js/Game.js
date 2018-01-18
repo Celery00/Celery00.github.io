@@ -24,7 +24,7 @@
                         // 保存数据
                         self.allImageObj = allImageObj;
                         // 运行游戏
-                        // self.run();
+                        self.run();
                     }
             });
             // 6.记录游戏是否正在运行
