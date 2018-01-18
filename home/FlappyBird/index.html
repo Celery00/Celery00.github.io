@@ -75,12 +75,12 @@
     $('div').click(function(){
         // location.reload();
         window.location.href = location.href+'?time='+((new Date()).getTime());
-        setTimeout(function() {
-            $('audio').remove('.audio');
-            var audio=$("<audio> </audio>").attr({src:"images/mali.mp3",loop:"loop",controls:"controls",autoplay:"autoplay"})
-            audio.addClass('audio');
-            $('.div').append(audio);
-        }, 1000);
+
+        $('audio').remove('.audio');
+        var audio=$("<audio> </audio>").attr({src:"images/mali.mp3",loop:"loop",controls:"controls",autoplay:"autoplay"})
+        audio.addClass('audio');
+        $('.div').append(audio);
+
         
     });
 
