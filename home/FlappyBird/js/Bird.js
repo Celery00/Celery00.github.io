@@ -128,7 +128,8 @@
             //     // 复位空气的阻力
             //     self.deleteY = 1;
             // }
-            $(document).on('click','game.canvas',function(){
+            var canvas1=game.canvas;
+            $(document).on('click','canvas1',function(){
                 self.state = 1;
                 self.rotateAngle = -25;
                 self.deleteY = 1;
