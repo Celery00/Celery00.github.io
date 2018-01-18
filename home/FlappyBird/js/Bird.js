@@ -127,14 +127,15 @@
                 self.rotateAngle = -25;
                 // 复位空气的阻力
                 self.deleteY = 1;
+                 var ua = navigator.userAgent.toLowerCase();  
+                if(ua.match(/MicroMessenger/i)=="micromessenger") {  
+                    console.log(1)  
+                } else {  
+                    console.log(0)   
+                } 
             }
             
-            var ua = navigator.userAgent.toLowerCase();  
-            if(ua.match(/MicroMessenger/i)=="micromessenger") {  
-                console.log(1)  
-            } else {  
-                console.log(0)   
-            }  
+            
             
             
             // game.canvas.on('click','touch',function(){
