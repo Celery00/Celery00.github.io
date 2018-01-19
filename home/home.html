@@ -10,9 +10,11 @@
 	<link rel="stylesheet" href="css/home.css">
 	<script src="https://cdn.bootcss.com/vue/2.4.4/vue.min.js"></script>
 	<script src='https://unpkg.com/vue-router/dist/vue-router.js'></script>
+	<script src="https://cdn.bootcss.com/vue-resource/1.3.4/vue-resource.min.js"></script>
 	<script src="https://cdn.bootcss.com/iview/2.4.0/iview.min.js"></script>
 	<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
 	<script src="js/home.js"></script>
+	
 </head>
 <body class="home">
 <div class="home_center" id="app">
@@ -20,7 +22,7 @@
 	<div class="home_top">
 		<ul class="ufb ufb-pj fs-16">
 			<li :class="curr==1?'curr':''" @click='changeBack(1)'> <a href="#">个人主页</a></li>
-			<li :class="curr==2?'curr':''" @click='changeBack(2)'> <a href="./skill.html">技能介绍</a></li>
+			<li :class="curr==2?'curr':''" @click='changeBack(2)'> <a href="#">技能介绍</a></li>
 			<li :class="curr==3?'curr':''" @click='changeBack(3)'> <a href="#">相册</a></li>
 			<li :class="curr==4?'curr':''" @click='changeBack(4)'> <a href="#">心情</a></li>
 			<li :class="curr==5?'curr':''" @click='changeBack(5)'> <a href="./FlappyBird/index.html">呵呵哒</a></li>
@@ -52,11 +54,27 @@
 	</div>
 	<!-- 右边 --> 
 	<div class="home_right">
-		
+		<ul>
+			<li v-if='curr==1'>首页</li>
+			<!-- 技能 -->
+			<li v-if='curr==2'>
+				<div>
+					<h3>在线翻译</h3>
+					<h5>简单 / 易用 / 方便</h5>
+					<i-input type="text" v-model='text' placeholder="请输入翻译内容~" style='width:300px' ></i-input>
+					 <i-select v-model="select" style="width:200px">
+				        <i-option v-for="item in cityList" :value="item.value" >{{ item.label }}</i-option>
+				    </i-select>
+					<span @click='translate'>点击翻译</span>
+					<p>{{translateText}}</p>
+				</div>
+			</li>
+			<li v-if='curr==3'>相册</li>
+			<li v-if='curr==4'>心情</li>
+		</ul>
 	</div>
 	
 </div>
-
 
 </body>
 </html>
