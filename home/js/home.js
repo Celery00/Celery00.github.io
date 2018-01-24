@@ -40,7 +40,7 @@ $(function(){
 			console.log(this.text);
 			var text=this.text;
 			console.log(this.select);
-			this.translateText=this.text;
+			// this.translateText=this.text;
 			this.$http.get('https://translate.yandex.net/api/v1.5/tr.json/translate?key=tras.1.1.201707.217082515z.54cf3dc583f679db.f4a96182281281d8b5dfe24b4e88298e2133f219&lang=en&text='+text).then(function(res){
 				console.log(res)
 			})
