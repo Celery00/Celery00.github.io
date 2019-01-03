@@ -9,13 +9,13 @@
 	div.box{max-width:360px;padding:20px;margin:20px auto;border:4px dashed #ccc;}
 	div.box>span{color:#999;font-style:italic;}
 	div.content{max-width:320px;margin:10px 0;padding:20px;border:2px solid #ff6666;}
-	input[type='text']{width:20px;height:35px;padding:5px 10px;margin:5px 0;border:1px solid #ff9966;text-align: center;background: #fff;}
+	input[type='text']{width:28px;height:35px;padding:5px 10px;margin:5px 0;border:1px solid #ff9966;text-align: center;background: #fff;}
 </style>
 </head>
 <body>
 
 	<div class="box">
-		<span>距离家朗国庆节回家还剩：</span>
+		<span>我们认识多久了</span>
 		<div class="content">
 			<input type="text" id="time_d"> 天 <input type="text" id="time_h"> 时 <input type="text" id="time_m"> 分 <input type="text" id="time_s"> 秒
 		</div>
@@ -44,10 +44,10 @@
 
 			if(time==1){
 		    	 // 计算时间差 (倒计时)
-	    	 	var time_distance = time_end - time_start; 
+	    	 	var time_distance =time_start - time_end; 
 
 	    	}else if(time==2){
-		    	//累计认识多少天
+		    	//从开学开始上学多少天
 		    	var time_distance =  time_start- time_start1; 
 	    	}
 
